@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Humanos</title>
+    <link rel="stylesheet" href="estilorecursosh.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Recursos Humanos</h1>
+        <nav>
+            <ul>
+                <li><a href="pagina.html">Inicio</a></li>
+                <li><a href="#lista-empleados">Lista de Empleados</a></li>
+                <li><a href="#agregar-empleado">Agregar Empleado</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="agregar-empleado">
+            <h2 align="center">Agregar Nuevo Empleado</h2>
+            <form id="form-empleado" action="registrar_empleado.php" method="POST">
+                
+                <label for="num_empleado">Numero de Empleado:</label>
+                <input type="number" id="num_empleado" name="num_empleado" required>
+
+                <label for="nombre">Nombre de Empleado:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="puesto">Puesto:</label>
+                <input type="text" id="puesto" name="puesto" required>
+                
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" name="departamento" required>
+                
+                <label for="fecha_contratacion">Fecha de Contratación:</label>
+                <input type="date" id="fecha_contratacion" name="fecha_contratacion" required>
+                
+                <button type="submit">Agregar Empleado</button>
+            </form>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Estadísticas</h2>
+            <p>Total de Empleados: <span id="total-empleados">3</span></p>
+            <p>Empleados por Departamento:</p>
+            <ul>
+                <li>Ventas: 1</li>
+                <li>Finanzas: 1</li>
+                <li>Tecnología: 1</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>2024 Supermercado S.A de C.V. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Ventas</title>
+    <link rel="stylesheet" href="estiloventas.css">
+    <style type="text/css">
+        .Estilo2 { font-size: 20px }
+        .Estilo4 { font-weight: bold }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reporte de Ventas</h1>
+        <nav>
+            <ul class="Estilo4">
+                <li><a href="pagina.html" class="Estilo2">Inicio</a></li>
+                <li><a href="#estadisticas" class="Estilo2">Estadísticas</a></li>
+                <li><a href="#grafico" class="Estilo2">Gráfico de Ventas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Formulario de Ventas</h2>
+        <form id="ventasForm" action="procesar_venta.php" method="POST">
+            <input id="num_producto" name="num_producto" class="input-field" placeholder="Número de Producto" required>
+            <br>
+            <input id="cantidad" name="cantidad" class="input-field" placeholder="Cantidad" required>
+            <br>
+            <input type="text" id="producto" name="producto" class="input-field" placeholder="Producto" required>
+            <br>
+            <input name="precio" class="input-field" id="precio" placeholder="Precio" step="0.01" required>
+            <br>
+            <button type="submit" class="submit-button">Registrar Venta</button>
+        </form>
+        <p class="error-message" id="errorMessage"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Supermercado S.A de C.V. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

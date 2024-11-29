@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención al Cliente</title>
+    <link rel="stylesheet" href="estiloatencion.css">
+    <style type="text/css">
+<!--
+.Estilo1 {font-size: 20px}
+-->
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Atención al Cliente</h1>
+        <nav>
+            <ul class="Estilo1">
+			    <li><a href="pagina.html">Inicio</a></li>
+                <li><a href="#lista-tickets">Lista de Tickets</a></li>
+                <li><a href="#crear-ticket">Crear Ticket</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ 
+        <section id="Crear-ticket">
+            <h2 align="center">Crear Nuevo Registro </h2>
+            <form id="form-ticket" action="cliente_reportes.php" method="POST">
+
+                <label for="nombre_cliente">Nombre del Cliente:</label>
+                <input type="text" id="nombre_cliente" name="nombre_cliente" required>
+                
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+                
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado"required>
+                    <option value="Abierto">Abierto</option>
+                    <option value="Cerrado">Cerrado</option>
+                    <option value="En progreso">En progreso</option>
+                </select>
+                
+                <label for="fecha_creacion">Fecha:</label>
+                <input type="date" id="fecha_creacion" name="fecha_creacion" required>
+                
+                <button type="submit">Crear Registro</button>
+            </form>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Estadísticas</h2>
+            <p>Total de Tickets: <span id="total-tickets">3</span></p>
+            <p>Tickets Abiertos: <span id="tickets-abiertos">2</span></p>
+            <p>Tickets Cerrados: <span id="tickets-cerrados">1</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supermercado S.A de C.V.Todos los derechos reservados.</p>
+        <p>&nbsp;</p>
+    </footer>
+    <p>
+      <script src="script.js"></script>
+    </p>
+</body>
+</html>

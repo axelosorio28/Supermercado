@@ -1,0 +1,93 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturación</title>
+    <link rel="stylesheet" href="estilofacturacion.css">
+    <style type="text/css">
+        .Estilo1 { font-size: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Facturación</h1>
+        <nav>
+            <ul class="Estilo1">
+                <li><a href="pagina.html">Inicio</a></li>
+                <li><a href="#lista-facturas">Lista de Facturas</a></li>
+                <li><a href="#crear-factura">Crear Factura</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lista-facturas">
+            <h2>Lista de Facturas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de Factura</th>
+                        <th>Cliente</th>
+                        <th>Monto</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Juan Pérez</td>
+                        <td>$500.00</td>
+                        <td>2024-10-01</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>María López</td>
+                        <td>$300.00</td>
+                        <td>2024-10-05</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Carlos García</td>
+                        <td>$700.00</td>
+                        <td>2024-10-10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="crear-factura">
+            <h2 align="center">Crear Nueva Factura</h2>
+            <form id="form-factura" action="registrar_factura.php" method="POST">
+                <label for="num_factura">Número de Factura:</label>
+                <input type="number" id="num_factura" name="num_factura" required>
+                
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+                
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" step="0.01" required>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <button type="submit">Crear Factura</button>
+            </form>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Estadísticas</h2>
+            <p>Total de Facturas: <span id="total-facturas">3</span></p>
+            <p>Total Facturado: <span id="total-monto">$1,500.00</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supermercado S.A. de C.V. Todos los derechos reservados.</p>
+        <p>&nbsp;</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
